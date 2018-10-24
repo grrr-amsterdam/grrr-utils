@@ -1,0 +1,8 @@
+.DS_Store
+.travis.yml
+.gitignore
+/node_modules
+/yarn-error.log
+/babel.config.js
+/src
+/test

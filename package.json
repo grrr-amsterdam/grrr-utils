@@ -1,0 +1,24 @@
+{
+  "name": "@grrr/utils",
+  "version": "1.0.0",
+  "description": "Utility functions, by Grrr.",
+  "author": "Grrr <npm@grrr.nl>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grrr-amsterdam/grrr-utils.git"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "^7.0.0-bridge",
+    "babel-jest": "^23.6.0",
+    "jest": "^23.6.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "babel src --out-dir dist"
+  }
+}
