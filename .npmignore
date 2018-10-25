@@ -1,8 +1,9 @@
 .DS_Store
 .travis.yml
 .gitignore
+package-lock.json
+yarn-error.log
 /node_modules
-/yarn-error.log
 /babel.config.js
 /src
 /test
