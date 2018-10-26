@@ -8,9 +8,9 @@ import curry from './curry';
  */
 const closest = curry((predicate, node) =>
   !node || node.nodeType === Node.DOCUMENT_NODE
-  ? undefined
-  : predicate(node)
-  ? node
-  : closest(predicate, node.parentNode));
+    ? undefined
+    : predicate(node)
+      ? node
+      : closest(predicate, node.parentNode));
 
 export default closest;

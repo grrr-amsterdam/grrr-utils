@@ -30,6 +30,5 @@ describe('closest', () => {
 
     expect(closest(x => x, document.getElementById('none')))
       .toBeUndefined();
-
   });
 });
