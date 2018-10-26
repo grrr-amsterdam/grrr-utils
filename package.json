@@ -15,10 +15,15 @@
     "@babel/preset-env": "^7.0.0",
     "babel-core": "^7.0.0-bridge",
     "babel-jest": "^23.6.0",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.26.1",
     "jest": "^23.6.0"
   },
   "scripts": {
     "test": "jest",
-    "build": "babel src --out-dir dist"
+    "build": "babel src --out-dir dist",
+    "lint": "eslint ."
   }
 }
