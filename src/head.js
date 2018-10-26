@@ -3,4 +3,5 @@
  *
  * head :: [a] -> a
  */
-export default ([x, ...xs]) => x
+
+export default ([x]) => x;
