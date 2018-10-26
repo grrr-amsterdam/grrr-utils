@@ -1,0 +1,16 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "quote-props": ["error", "consistent"],
+    "arrow-parens": 0,
+    "no-confusing-arrow": 0,
+    "no-nested-ternary": 0,
+    "implicit-arrow-linebreak": 0,
+    "arrow-body-style": 0
+  }
+}
