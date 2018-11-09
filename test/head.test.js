@@ -1,4 +1,4 @@
-import head from '../src/head';
+import head from '../functions/head';
 
 describe('Head', () => {
   test('Should grab the first of an array', () => {

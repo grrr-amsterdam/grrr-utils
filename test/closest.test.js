@@ -1,4 +1,4 @@
-import closest from '../src/closest';
+import closest from '../functions/closest';
 
 describe('closest', () => {
   test('Finds parent nodes, or itself whenever it matches the predicate.', () => {
