@@ -1,4 +1,4 @@
-import tail from '../src/tail';
+import tail from '../functions/tail';
 
 describe('Tail', () => {
   test('Should get the tail of an array', () => {

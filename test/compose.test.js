@@ -1,4 +1,4 @@
-import compose from '../src/compose';
+import compose from '../functions/compose';
 
 describe('Compose', () => {
   test('Should compose functions', () => {
