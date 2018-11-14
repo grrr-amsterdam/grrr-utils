@@ -1,4 +1,4 @@
-import tap from '../src/tap';
+import tap from '../functions/tap';
 
 describe('tap', () => {
   test('Executes a side-effect', () => {
