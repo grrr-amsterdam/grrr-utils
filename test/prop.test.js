@@ -1,4 +1,4 @@
-import prop from '../src/prop';
+import prop from '../functions/prop';
 
 describe('prop', () => {
   test('Gets a property from an object', () => {

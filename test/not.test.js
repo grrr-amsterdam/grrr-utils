@@ -1,4 +1,4 @@
-import not from '../src/not';
+import not from '../functions/not';
 
 describe('not', () => {
   test('Reverses outcome of given function', () => {
