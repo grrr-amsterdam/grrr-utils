@@ -2,7 +2,6 @@
   "name": "@grrr/utils",
   "version": "1.0.0",
   "description": "Utility functions, by Grrr.",
-  "main": "index.js",
   "author": "Grrr <npm@grrr.nl>",
   "license": "MIT",
   "repository": {
@@ -25,6 +24,15 @@
   "scripts": {
     "test": "jest",
     "build": "babel src --out-dir dist",
-    "lint": "eslint ."
+    "lint": "eslint . --ext=.js,.mjs"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.m?js$": "babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "mjs"
+    ]
   }
 }
