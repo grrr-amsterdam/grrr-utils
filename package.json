@@ -1,6 +1,6 @@
 {
   "name": "@grrr/utils",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Utility functions, by Grrr.",
   "main": "index.js",
   "author": "Grrr <npm@grrr.nl>",
