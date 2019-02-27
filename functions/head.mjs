@@ -3,5 +3,4 @@
  *
  * head :: [a] -> a
  */
-
 export default ([x]) => x;

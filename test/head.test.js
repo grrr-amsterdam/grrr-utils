@@ -1,6 +1,6 @@
 import head from '../functions/head';
 
-describe('Head', () => {
+describe('head', () => {
   test('Should grab the first of an array', () => {
     expect(head(['foo', 'bar', 'baz'])).toEqual('foo');
     expect(head([])).toBeUndefined();
