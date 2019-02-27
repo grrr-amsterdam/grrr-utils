@@ -24,7 +24,7 @@ Note: depending on your setup additional configuration might be needed ([see bel
 Import a function and invoke it:
 
 ```js
-import closest from '@grrr/utils/functions/closest';
+import { closest } from '@grrr/utils';
 
 const findParentFoo = closest(el => el.hasAttribute(`data-foo`));
 ```

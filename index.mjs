@@ -1,0 +1,11 @@
+export { default as closest } from './functions/closest';
+export { default as compose } from './functions/compose';
+export { default as curry } from './functions/curry';
+export { default as head } from './functions/head';
+export { default as map } from './functions/map';
+export { default as not } from './functions/not';
+export { default as preventDefault } from './functions/preventDefault';
+export { default as preventingDefault } from './functions/preventingDefault';
+export { default as prop } from './functions/prop';
+export { default as tail } from './functions/tail';
+export { default as tap } from './functions/tap';
