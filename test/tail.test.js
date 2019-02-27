@@ -1,6 +1,6 @@
 import tail from '../functions/tail';
 
-describe('Tail', () => {
+describe('tail', () => {
   test('Should get the tail of an array', () => {
     expect(tail(['foo', 'bar', 'baz'])).toEqual(['bar', 'baz']);
     expect(tail([])).toEqual([]);

@@ -1,6 +1,6 @@
 import compose from '../functions/compose';
 
-describe('Compose', () => {
+describe('compose', () => {
   test('Should compose functions', () => {
     const join = xs => xs.join(' ');
     const split = xs => xs.split(' ');
