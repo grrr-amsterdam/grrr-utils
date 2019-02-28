@@ -5,18 +5,22 @@ describe('debounce', () => {
   let debouncedFn;
 
   beforeEach(() => {
-    fn = jest.fn();
+    fn = jest.fn(() => 42);
     debouncedFn = debounce(fn, 1000);
   });
 
   jest.useFakeTimers();
 
   test('Should debounce function calls', () => {
-    debouncedFn();
+    expect.assertions(3);
+
+    const promise = debouncedFn().then(x => expect(x).toEqual(42));
+
     expect(fn).toHaveBeenCalledTimes(0);
 
     jest.runAllTimers();
     expect(fn).toHaveBeenCalledTimes(1);
+    return promise;
   });
 
   test('Should only call it once', () => {

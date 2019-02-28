@@ -2,15 +2,19 @@
 import curry from './curry';
 
 /**
- * debounce :: (a -> b) -> Number -> (a -> b)
+ * debounce :: (a -> b) -> Number -> (a -> Promise b)
  */
-const debounce = curry((fn, delay) => {
-  let timer;
-  return function (...args) {
-    const context = this;
-    clearTimeout(timer);
-    timer = setTimeout(() => fn.apply(context, args), delay);
-  };
-});
+const debounce = curry(
+  (fn, delay) => {
+    let timer;
+    return function (...args) {
+      return new Promise((resolve) => {
+        const context = this;
+        clearTimeout(timer);
+        timer = setTimeout(() => resolve(fn.apply(context, args)), delay);
+      });
+    };
+  }
+);
 
 export default debounce;
