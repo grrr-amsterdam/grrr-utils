@@ -73,3 +73,11 @@ ignore: [/\/node_modules\/(?!.*.*\/.*.mjs)/],
 ```
 
 This can be added in your `babel.config.js`, `.babelrc` or `package.json`; quotes will be necessary for JSON-based configurations.
+
+#### Node
+
+Run Node with support for [ECMAScript Modules](https://nodejs.org/api/esm.html) enabled:
+
+```shell
+node --experimental-modules my-app.mjs
+```
