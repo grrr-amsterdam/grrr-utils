@@ -1,6 +1,7 @@
 export { default as closest } from './functions/closest';
 export { default as compose } from './functions/compose';
 export { default as curry } from './functions/curry';
+export { default as debounce } from './functions/debounce';
 export { default as head } from './functions/head';
 export { default as map } from './functions/map';
 export { default as not } from './functions/not';
@@ -9,3 +10,4 @@ export { default as preventingDefault } from './functions/preventingDefault';
 export { default as prop } from './functions/prop';
 export { default as tail } from './functions/tail';
 export { default as tap } from './functions/tap';
+export { default as throttle } from './functions/throttle';

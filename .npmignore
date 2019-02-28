@@ -5,5 +5,4 @@ package-lock.json
 yarn-error.log
 /node_modules
 /babel.config.js
-/src
 /test
