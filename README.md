@@ -37,7 +37,9 @@ import closest from '@grrr/utils/functions/closest';
 
 ## Documentation
 
-TODO: add documentation about functions.
+Please see the [functions directory](https://github.com/grrr-amsterdam/grrr-utils/tree/master/functions) for available functions.
+
+TODO: add documentation for included functions.
 
 ## Usage with build tools
 
