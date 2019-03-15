@@ -2,6 +2,8 @@
 import curry from './curry';
 
 /**
+ * Group function calls in a single delayed call after the last call.
+ *
  * debounce :: (a -> b) -> Number -> (a -> Promise b)
  */
 const debounce = curry(

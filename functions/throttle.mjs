@@ -2,6 +2,8 @@
 import curry from './curry';
 
 /**
+ * Throttle functions so they're invoked according to the given threshold.
+ *
  * throttle :: (a -> b) -> Number -> (a -> b)
  */
 const throttle = curry((fn, threshold) => {
