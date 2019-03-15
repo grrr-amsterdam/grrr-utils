@@ -12,6 +12,7 @@
     "no-confusing-arrow": 0,
     "no-nested-ternary": 0,
     "implicit-arrow-linebreak": 0,
-    "arrow-body-style": 0
+    "arrow-body-style": 0,
+    "quotes": 0,
   }
 }
