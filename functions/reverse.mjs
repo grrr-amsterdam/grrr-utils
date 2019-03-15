@@ -1,5 +1,5 @@
 /**
- * Return a reversed array.
+ * Return a reversed array of a collection.
  */
 const reverse = ([x, ...xs]) => x ? [...reverse(xs), x] : [];
 

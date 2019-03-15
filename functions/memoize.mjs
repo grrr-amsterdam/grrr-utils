@@ -2,7 +2,7 @@ import curry from './curry';
 
 /**
  * Store results of function calls and return the cache when input arguments
- * are the same;
+ * are the same.
  */
 const memoize = curry(fn => {
   const cache = {};
