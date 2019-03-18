@@ -7,23 +7,32 @@ describe('throttle', () => {
   let throttledFn;
 
   beforeEach(() => {
-    fn = jest.fn();
+    fn = jest.fn((x) => x * 2);
     throttledFn = throttle(fn, THRESHOLD);
   });
 
   jest.useFakeTimers();
 
   test('Should invoke function immediately', () => {
-    throttledFn();
-    expect(fn).toHaveBeenCalledTimes(1);
+    expect.assertions(3);
+    const promises = [
+      throttledFn(21).then(x => expect(x).toEqual(42)),
+      throttledFn(200).then(x => expect(x).toEqual(400)),
+    ];
+    expect(fn).toHaveBeenCalledTimes(2);
+    return Promise.all(promises);
   });
 
   test('Should throttle function calls', () => {
-    for (let i = 0; i < THRESHOLD * 10; i += THRESHOLD) {
-      throttledFn();
+    expect.assertions(21);
+    const promises = [];
+    for (let i = 0; i < 10; i += 1) {
+      promises.push(throttledFn(21).then(x => expect(x).toEqual(42)));
+      promises.push(throttledFn(200).then(x => expect(x).toEqual(400)));
       jest.advanceTimersByTime(THRESHOLD);
     }
-    expect(fn).toHaveBeenCalledTimes(10);
+    expect(fn).toHaveBeenCalledTimes(20);
+    return Promise.all(promises);
   });
 
   test('Should call function with given arguments', () => {
