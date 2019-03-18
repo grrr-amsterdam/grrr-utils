@@ -1,28 +1,36 @@
 /* eslint-disable func-names */
 import curry from './curry';
+import memoize from './memoize';
 
 /**
- * Throttle functions so they're invoked according to the given threshold.
- *
- * throttle :: (a -> b) -> Number -> (a -> b)
+ * Creates a throttled function that invokes {fn} only every
+ * {threshold} milliseconds.
+ * Returns a promise that resolves to the value returned by {fn}.
  */
-const throttle = curry((fn, threshold) => {
-  let timer;
-  let last;
-  return function (...args) {
-    const context = this;
-    const now = +new Date();
-    if (last && now < last + threshold) {
-      clearTimeout(timer);
-      timer = setTimeout(() => {
-        fn.apply(context, args);
-        last = now;
-      }, threshold);
-    } else {
-      fn.apply(context, args);
-      last = now;
-    }
-  };
-});
+const throttle = curry(
+  (fn, threshold) => {
+    const getState = memoize(() => ({
+      last: undefined,
+      timer: undefined,
+    }));
+    return function (...args) {
+      const context = this;
+      const now = +new Date();
+      const state = getState(...args);
+      return new Promise((resolve) => {
+        const invokeFn = () => {
+          state.last = now;
+          return resolve(fn.apply(context, args));
+        };
+        if (state.last && now < state.last + threshold) {
+          clearTimeout(state.timer);
+          state.timer = setTimeout(invokeFn, threshold);
+          return;
+        }
+        invokeFn();
+      });
+    };
+  }
+);
 
 export default throttle;
