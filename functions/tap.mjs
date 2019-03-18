@@ -4,8 +4,6 @@
  * function in the middle. Handy for chaining logs. For instance:
  *
  * myPromise().then(tap(x => console.log(x))).then(x => ...);
- *
- * tap :: (a -> b) -> (a -> a)
  */
 export default f =>
   x => {
