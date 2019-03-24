@@ -10,13 +10,13 @@ const trapFocus = (focusNode, rootNode = document) => {
   const nodes = [...rootNode.querySelectorAll(CANDIDATES)]
     .filter(node => !focusNode.contains(node) && node.getAttribute('tabindex') !== '-1');
 
-  const trap = () => nodes.forEach(node => node.setAttribute('tabindex', '-1'));
-  const untrap = () => nodes.forEach(node => node.removeAttribute('tabindex'));
+  const activate = () => nodes.forEach(node => node.setAttribute('tabindex', '-1'));
+  const deactivate = () => nodes.forEach(node => node.removeAttribute('tabindex'));
 
   return {
     nodes,
-    trap,
-    untrap,
+    activate,
+    deactivate,
   };
 };
 
