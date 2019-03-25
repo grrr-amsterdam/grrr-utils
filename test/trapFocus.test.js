@@ -23,7 +23,6 @@ describe('trapFocus', () => {
     const close = document.querySelector('#close');
 
     const focusTrap = trapFocus(modal);
-    focusTrap.activate();
 
     expect(foo.getAttribute('tabindex')).toEqual('-1');
     expect(bar.getAttribute('tabindex')).toEqual('-1');
@@ -31,11 +30,19 @@ describe('trapFocus', () => {
     expect(modal.getAttribute('tabindex')).toBeNull();
     expect(close.getAttribute('tabindex')).toBeNull();
 
-    focusTrap.deactivate();
+    focusTrap.release();
 
     expect(foo.getAttribute('tabindex')).toBeNull();
     expect(bar.getAttribute('tabindex')).toEqual('-1');
     expect(button.getAttribute('tabindex')).toBeNull();
+    expect(modal.getAttribute('tabindex')).toBeNull();
+    expect(close.getAttribute('tabindex')).toBeNull();
+
+    focusTrap.retrap();
+
+    expect(foo.getAttribute('tabindex')).toEqual('-1');
+    expect(bar.getAttribute('tabindex')).toEqual('-1');
+    expect(button.getAttribute('tabindex')).toEqual('-1');
     expect(modal.getAttribute('tabindex')).toBeNull();
     expect(close.getAttribute('tabindex')).toBeNull();
   });
