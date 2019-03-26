@@ -12,31 +12,28 @@ describe('debounce', () => {
   jest.useFakeTimers();
 
   test('Should debounce function calls', () => {
-    expect.assertions(4);
+    expect.assertions(3);
 
-    const promises = [
-      debouncedFn(21).then(x => expect(x).toEqual(42)),
-      debouncedFn(200).then(x => expect(x).toEqual(400)),
-    ];
+    const promise = debouncedFn(21).then(x => expect(x).toEqual(42));
 
     expect(fn).toHaveBeenCalledTimes(0);
 
     jest.runAllTimers();
-    expect(fn).toHaveBeenCalledTimes(2);
-    return Promise.all(promises);
+    expect(fn).toHaveBeenCalledTimes(1);
+    return promise;
   });
 
   test('Should only call it once', () => {
-    const promises = [];
+    let promise;
     for (let i = 0; i < 100; i += 1) {
-      promises.push(debouncedFn());
+      promise = debouncedFn();
       jest.advanceTimersByTime(1);
     }
     expect(fn).toHaveBeenCalledTimes(0);
 
     jest.runAllTimers();
     expect(fn).toHaveBeenCalledTimes(1);
-    return Promise.all(promises);
+    return promise;
   });
 
   test('Should call function with given arguments', () => {

@@ -1,14 +1,5 @@
 /* eslint-disable func-names */
 import curry from './curry';
-import memoize from './memoize';
-
-const setTimer = memoize(() => {
-  let timer;
-  return (fn, delay) => {
-    clearTimeout(timer);
-    timer = setTimeout(fn, delay);
-  };
-});
 
 /**
  * Creates a debounced function that delays invoking {fn} until after {delay}
@@ -17,12 +8,14 @@ const setTimer = memoize(() => {
  */
 const debounce = curry(
   (fn, delay) => {
-    return memoize(function (...args) {
-      const context = this;
+    let timer;
+    return function (...args) {
       return new Promise((resolve) => {
-        setTimer(...args)(() => resolve(fn.apply(context, args)), delay);
+        const context = this;
+        clearTimeout(timer);
+        timer = setTimeout(() => resolve(fn.apply(context, args)), delay);
       });
-    });
+    };
   }
 );
 
