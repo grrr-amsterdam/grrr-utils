@@ -28,7 +28,7 @@ A grouped list of functions based on their origin/usage.
 ### DOM & Browser
 
 - [closest](#closest)
-- [htmlToElement](#htmlToElement
+- [htmlToElement](#htmlToElement)
 - [preventDefault](#preventDefault)
 - [preventingDefault](#preventingDefault)
 - [trapFocus](#trapFocus)
