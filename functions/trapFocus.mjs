@@ -1,5 +1,6 @@
 const CANDIDATES = `
-  a, button, input, select, textarea, area, iframe, object, embed,
+  a, button, input, select, textarea, svg, area, details, summary,
+  iframe, object, embed,
   [tabindex], [contenteditable]
 `;
 
