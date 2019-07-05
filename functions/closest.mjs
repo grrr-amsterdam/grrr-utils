@@ -5,7 +5,7 @@ import curry from './curry';
  * matching the predicate function.
  */
 const closest = curry((predicate, node) =>
-  !node || node.nodeType === Node.DOCUMENT_NODE
+  !node || node.nodeType === Node.DOCUMENT_NODE || node.nodeType === Node.DOCUMENT_FRAGMENT_NODE
     ? undefined
     : predicate(node)
       ? node
