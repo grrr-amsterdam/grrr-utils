@@ -1,20 +1,22 @@
 import closest from '../functions/closest';
 
 describe('closest', () => {
+  const template = `
+    <article id="root-article">
+      <h1>My title</h1>
+      <p lang="la">Lorem ipsum dolor sit amet</p>
+      <footer>
+        <article id="footer-article">
+          <div lang="la" id="footer-div">
+            <p>Lorem ipsum dolor sit amet</p>
+          </div>
+        </article>
+      </footer>
+    </article>
+  `;
+
   test('Finds parent nodes, or itself whenever it matches the predicate.', () => {
-    document.body.innerHTML = `
-      <article id="root-article">
-        <h1>My title</h1>
-        <p lang="la">Lorem ipsum dolor sit amet</p>
-        <footer>
-          <article id="footer-article">
-            <div lang="la" id="footer-div">
-              <p>Lorem ipsum dolor sit amet</p>
-            </div>
-          </article>
-        </footer>
-      </article>
-    `;
+    document.body.innerHTML = template;
 
     expect(closest(x => x.hasAttribute('id'), document.querySelector('footer')))
       .toEqual(document.querySelector('#root-article'));
@@ -29,6 +31,21 @@ describe('closest', () => {
       .toBeUndefined();
 
     expect(closest(x => x, document.getElementById('none')))
+      .toBeUndefined();
+  });
+
+  test('Does not traverse up to document nodes.', () => {
+    const fragment = document.createDocumentFragment();
+    const placeholder = document.createElement('div');
+
+    document.body.innerHTML = template;
+    placeholder.innerHTML = template;
+    fragment.appendChild(placeholder);
+
+    expect(closest(x => x.hasAttribute('none'), document.querySelector('article')))
+      .toBeUndefined();
+
+    expect(closest(x => x.hasAttribute('none'), fragment.querySelector('article')))
       .toBeUndefined();
   });
 });
