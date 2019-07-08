@@ -1,6 +1,6 @@
 {
   "name": "@grrr/utils",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Utility functions, by Grrr.",
   "main": "index.mjs",
   "author": "Grrr <npm@grrr.nl>",
