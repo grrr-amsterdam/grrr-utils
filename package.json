@@ -23,8 +23,7 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint . --ext=.js,.mjs",
-    "prepack": "node ./scripts/generate-index.js",
-    "prepublish": "node ./scripts/generate-index.js"
+    "prepack": "node ./scripts/generate-index.js"
   },
   "jest": {
     "transform": {
