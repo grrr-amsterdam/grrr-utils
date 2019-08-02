@@ -12,6 +12,7 @@ A grouped list of functions based on their origin/usage.
 - [pick](#pick)
 - [prop](#prop)
 - [reverse](#reverse)
+- [sample](#sample)
 - [tail](#tail)
 - [take](#take)
 - [takeLast](#takeLast)
@@ -242,6 +243,16 @@ Return a reversed array of a collection.
 ```js
 reverse([2, 4, 8]); //=> [8, 4, 2]
 reverse('baz'); //=> ['z', 'a', 'b']
+```
+
+### sample
+
+Grab a random item from a collection.
+
+```js
+sample([{ id: 1 }, { id: 2 }, { id: 3 }]); //=> { id: 3 }
+sample(['foo', 'bar', 'baz']); //=> 'bar'
+sample('foo bar'); //=> 'o'
 ```
 
 ### tail
