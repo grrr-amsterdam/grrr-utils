@@ -2,12 +2,13 @@
 
 [![Build Status](https://travis-ci.com/grrr-amsterdam/grrr-utils.svg?branch=master)](https://travis-ci.com/grrr-amsterdam/grrr-utils)
 
-
-### JavaScript utility library, by Grrr
+### JavaScript utility library
 
 - No dependencies
 - Includes functional and DOM utility functions
 - Lightweight and untranspiled
+
+Built with ❤️ by [GRRR](https://grrr.tech).
 
 ## Installation
 
