@@ -16,6 +16,7 @@ export { default as preventDefault } from './functions/preventDefault';
 export { default as preventingDefault } from './functions/preventingDefault';
 export { default as prop } from './functions/prop';
 export { default as reverse } from './functions/reverse';
+export { default as sample } from './functions/sample';
 export { default as tail } from './functions/tail';
 export { default as take } from './functions/take';
 export { default as takeLast } from './functions/takeLast';
