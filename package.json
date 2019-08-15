@@ -3,7 +3,8 @@
   "version": "2.3.0",
   "description": "Utility functions, by Grrr.",
   "main": "index.mjs",
-  "author": "Grrr <npm@grrr.nl>",
+  "author": "GRRR <npm@grrr.nl>",
+  "homepage": "https://github.com/grrr-amsterdam/grrr-utils",
   "license": "MIT",
   "repository": {
     "type": "git",
