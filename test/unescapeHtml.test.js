@@ -7,6 +7,6 @@ describe('unescapeHtml', () => {
 
     expect(unescapeHtml(escapedTemplate)).toEqual(unescapedTemplate);
     expect(unescapeHtml(unescapedTemplate)).toEqual(unescapedTemplate);
-    expect('').toEqual('');
+    expect(unescapeHtml('')).toEqual('');
   });
 });

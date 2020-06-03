@@ -2,9 +2,9 @@
  * Unescapes HTML.
  */
 const unescapeHtml = html => {
-  const text = document.createElement('textarea');
-  text.innerHTML = html;
-  return text.value;
+  const textarea = document.createElement('textarea');
+  textarea.innerHTML = html;
+  return textarea.textContent;
 };
 
 export default unescapeHtml;

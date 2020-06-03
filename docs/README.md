@@ -29,6 +29,7 @@ A grouped list of functions based on their origin/usage.
 ### DOM & Browser
 
 - [closest](#closest)
+- [escapeHtml](#escapeHtml)
 - [htmlToElement](#htmlToElement)
 - [preventDefault](#preventDefault)
 - [preventingDefault](#preventingDefault)
@@ -112,6 +113,17 @@ const bar = [];
 
 defined(foo); //=> false
 defined(bar); //=> true
+```
+
+### escapeHtml
+
+Escapes HTML. Useful for sanitizing user input to prevent XSS attacks.
+
+See also [unescapeHtml](#unescapeHtml).
+
+```js
+const html = `"><img src=/ onerror="alert('XSS')"></img>`;
+escapeHtml(html) //=> &quot;&gt;&lt;img src=/ onerror=&quot;alert(&#039;XSS&#039;)&quot;&gt;&lt;/img&gt;
 ```
 
 ### head
@@ -330,6 +342,8 @@ focusTrap.retrap(); // retraps focus again (initial nodes only)
 ### unescapeHtml
 
 Unescapes HTML.
+
+See also [escapeHtml](#escapeHtml).
 
 ```js
 const html = `&lt;button id=&#34;button&#34;&gt;Click me&lt;/button&gt;`;
