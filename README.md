@@ -10,6 +10,10 @@
 
 Built with ❤️ by [GRRR](https://grrr.tech).
 
+## Documentation
+
+[View the documentation](https://github.com/grrr-amsterdam/grrr-utils/tree/master/docs) for all available functions.
+
 ## Installation
 
 ```sh
@@ -33,7 +37,3 @@ Functions can also be imported from the function file itself:
 ```js
 import closest from '@grrr/utils/functions/closest';
 ```
-
-## Documentation
-
-[View the documentation](https://github.com/grrr-amsterdam/grrr-utils/tree/master/docs) for all available functions.
