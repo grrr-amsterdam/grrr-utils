@@ -6,11 +6,7 @@ describe('deepCopy', () => {
       foo: 'foo',
       config: {
         enabled: true,
-        detail: {
-          something: 'something',
-          pi: 3.4
-        }
-      }
+      },
     };
 
     const copy = deepCopy(original);

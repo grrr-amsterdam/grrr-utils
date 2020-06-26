@@ -5,13 +5,14 @@ const deepCopy = (obj) => {
   if (typeof obj !== 'object' || obj === null) {
     return obj;
   }
-  const copy = Array.isArray(obj) ? [] : {};
-
-  for (const key in obj) {
-    const value = obj[key];
-    copy[key] = deepCopy(value);
-  }
-  return copy;
+  return Object.keys(obj).reduce(
+    (acc, key) => {
+      const value = obj[key];
+      acc[key] = deepCopy(value);
+      return acc;
+    },
+    Array.isArray(obj) ? [] : {}
+  );
 };
 
 export default deepCopy;
