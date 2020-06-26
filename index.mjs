@@ -2,6 +2,7 @@ export { default as closest } from './functions/closest';
 export { default as compose } from './functions/compose';
 export { default as curry } from './functions/curry';
 export { default as debounce } from './functions/debounce';
+export { default as deepCopy } from './functions/deepCopy';
 export { default as defined } from './functions/defined';
 export { default as escapeHtml } from './functions/escapeHtml';
 export { default as head } from './functions/head';
