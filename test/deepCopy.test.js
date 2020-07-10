@@ -18,5 +18,6 @@ describe('deepCopy', () => {
     copy.config.enabled = false;
 
     expect(original.config.enabled).toBe(true);
+    expect(copy).not.toEqual(original);
   });
 });

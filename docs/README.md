@@ -4,6 +4,7 @@ A grouped list of functions based on their origin/usage.
 
 ### Objects & Arrays
 
+- [deepCopy](#deepCopy)
 - [head](#head)
 - [last](#last)
 - [map](#map)
@@ -101,6 +102,22 @@ const resizeListener = async e => {
 };
 
 window.addEventListener('resize', resizeListener);
+```
+
+### deepCopy
+
+Simple deep-copy function for cloning objects.
+
+```js
+const original = {
+  foo: 'foo',
+  config: {
+    enabled: true,
+  },
+};
+
+const copy = deepCopy(original);
+copy.config.enabled = false; // => will not update `original.config.enabled`
 ```
 
 ### defined
