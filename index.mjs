@@ -25,5 +25,6 @@ export { default as takeLast } from './functions/takeLast';
 export { default as tap } from './functions/tap';
 export { default as throttle } from './functions/throttle';
 export { default as trapFocus } from './functions/trapFocus';
+export { default as triggerEvent } from './functions/triggerEvent';
 export { default as unescapeHtml } from './functions/unescapeHtml';
 export { default as uuid } from './functions/uuid';

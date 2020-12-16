@@ -35,6 +35,7 @@ A grouped list of functions based on their origin/usage.
 - [preventDefault](#preventDefault)
 - [preventingDefault](#preventingDefault)
 - [trapFocus](#trapFocus)
+- [triggerEvent](#triggerEvent)
 - [unescapeHtml](#unescapeHtml)
 
 ### Misc
@@ -356,6 +357,23 @@ focusTrap.release(); // releases focus
 focusTrap.retrap(); // retraps focus again (initial nodes only)
 ```
 
+### triggerEvent
+
+Create and trigger a synthetic event ([new Event](https://developer.mozilla.org/en-US/docs/Web/API/Event/Event) combined with [dispatchEvent](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent)).
+
+Useful when updating the value of HTML inputs, while maintaining existing `addEventListener` callback behaviour. Defaults to a bubbling and cancelable event, but allows optional [Event properties](https://developer.mozilla.org/en-US/docs/Web/API/Event#Properties) object as *third* argument.
+
+```js
+input.addEventListener('input', foo);
+input.value = 25;
+triggerEvent(input, 'input'); //=> `foo` is called
+
+// with another type of event and `Event` constructor arguments
+triggerEvent(input, 'blur', {
+  composed: false,
+});
+```
+
 ### unescapeHtml
 
 Unescapes HTML.
@@ -369,7 +387,7 @@ unescapeHtml(html) //=> <button id="button">Click me</button>
 
 ### uuid
 
-Generate RFC4122 v4 compliant UUID.
+Generate [RFC4122](https://tools.ietf.org/html/rfc4122) v4 compliant UUID.
 
 Handy for generating dynamic ids for accessible components used multiple times on a page.
 
