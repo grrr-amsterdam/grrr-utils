@@ -8,7 +8,12 @@
 - Includes functional and DOM utility functions
 - Lightweight and untranspiled
 
-Built with ❤️ by [GRRR](https://grrr.tech).
+### Developed with ❤️ by [GRRR](https://grrr.nl)
+
+- GRRR is a [B Corp](https://grrr.nl/en/b-corp/)
+- GRRR has a [tech blog](https://grrr.tech/)
+- GRRR is [hiring](https://grrr.nl/en/jobs/)
+- [@GRRRTech](https://twitter.com/grrrtech) tweets
 
 ## Documentation
 
