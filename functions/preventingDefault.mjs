@@ -1,6 +1,6 @@
-import compose from './compose';
-import preventDefault from './preventDefault';
-import tap from './tap';
+import compose from './compose.mjs';
+import preventDefault from './preventDefault.mjs';
+import tap from './tap.mjs';
 
 /**
  * Function decorator to create event listeners from common functions.

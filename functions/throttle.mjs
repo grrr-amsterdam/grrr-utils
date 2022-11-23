@@ -1,6 +1,6 @@
 /* eslint-disable func-names */
-import curry from './curry';
-import memoize from './memoize';
+import curry from './curry.mjs';
+import memoize from './memoize.mjs';
 
 /**
  * Creates a throttled function that invokes {fn} only every

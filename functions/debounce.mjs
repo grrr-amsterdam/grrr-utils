@@ -1,5 +1,5 @@
 /* eslint-disable func-names */
-import curry from './curry';
+import curry from './curry.mjs';
 
 /**
  * Creates a debounced function that delays invoking {fn} until after {delay}

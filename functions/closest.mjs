@@ -1,4 +1,4 @@
-import curry from './curry';
+import curry from './curry.mjs';
 
 /**
  * Generic function for traversing a DOM, returning the first element

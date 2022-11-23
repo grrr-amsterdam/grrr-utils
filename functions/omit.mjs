@@ -1,4 +1,4 @@
-import curry from './curry';
+import curry from './curry.mjs';
 
 /**
  * Return a partial copy of an object omitting the keys specified.

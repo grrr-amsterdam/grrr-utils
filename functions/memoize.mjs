@@ -1,4 +1,4 @@
-import curry from './curry';
+import curry from './curry.mjs';
 
 /**
  * Store results of function calls and return the cache when input arguments
