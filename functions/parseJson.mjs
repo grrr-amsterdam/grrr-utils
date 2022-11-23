@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-import defined from './defined';
+import defined from './defined.mjs';
 
 /**
  * Parse JSON in a safe way.
