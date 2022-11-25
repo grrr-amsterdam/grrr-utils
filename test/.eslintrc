@@ -6,5 +6,9 @@
   },
   "plugins": [
     "jest"
-  ]
+  ],
+  "rules": {
+    "import/extensions": ["error", "always", { "js": "never", "mjs": "never" }],
+    "jest/valid-expect-in-promise": 0
+  }
 }

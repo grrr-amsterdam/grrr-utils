@@ -5,7 +5,7 @@
     "es6": true
   },
   "rules": {
-    "import/extensions": ["error", "always", { "js": "never", "mjs": "never" }],
+    "import/extensions": ["error", "always", { "js": "never", "mjs": "always" }],
     "comma-dangle": ["error", {
         "arrays": "always-multiline",
         "objects": "always-multiline",
