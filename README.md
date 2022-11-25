@@ -40,5 +40,5 @@ const findParentFoo = closest(el => el.hasAttribute(`data-foo`));
 Functions can also be imported from the function file itself:
 
 ```js
-import closest from '@grrr/utils/functions/closest';
+import closest from '@grrr/utils/functions/closest.mjs';
 ```
