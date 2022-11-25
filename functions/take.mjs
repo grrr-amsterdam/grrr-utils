@@ -1,4 +1,4 @@
-import curry from './curry';
+import curry from './curry.mjs';
 
 /**
  * Grab the first n items of a collection.
