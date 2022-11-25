@@ -14,12 +14,13 @@
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
     "@babel/plugin-transform-modules-commonjs": "^7.2.0",
-    "babel-jest": "^26.0.1",
+    "babel-jest": "^29.3.1",
     "eslint": "^7.1.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^23.0.2",
-    "jest": "^26.0.1"
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1"
   },
   "scripts": {
     "test": "jest",
@@ -27,6 +28,7 @@
     "prepack": "node ./scripts/generate-index.js"
   },
   "jest": {
+    "testEnvironment": "jsdom",
     "transform": {
       "^.+\\.m?js$": "babel-jest"
     },
