@@ -1,6 +1,6 @@
 # Documentation
 
-A grouped list of functions based on their origin/usage.
+A grouped list of functions based on their origin/usage:
 
 ### Objects & Arrays
 
@@ -38,7 +38,7 @@ A grouped list of functions based on their origin/usage.
 - [triggerEvent](#triggerEvent)
 - [unescapeHtml](#unescapeHtml)
 
-### Misc
+### Miscellaneous
 
 - [defined](#defined)
 - [parseJson](#parseJson)
@@ -48,7 +48,7 @@ A grouped list of functions based on their origin/usage.
 
 ## Functions
 
-A full list of functions and usage examples.
+All functions with usage examples:
 
 ### closest
 
@@ -196,7 +196,7 @@ memoizedFoo(1, 2); // from memory
 memoizedFoo(1, 2); // from memory
 memoizedFoo(3, 4); // calculated
 memoizedFoo(1, 2); // from memory
-``` 
+```
 
 ### not
 
