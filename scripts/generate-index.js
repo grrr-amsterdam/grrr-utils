@@ -14,7 +14,7 @@ stream.once('open', () => {
   files.forEach(file => {
     const { name } = path.parse(file);
     console.log(`Adding: ${name}`);
-    stream.write(`export { default as ${name} } from '${FUNCTIONS_DIRECTORY}/${name}';\n`);
+    stream.write(`export { default as ${name} } from '${FUNCTIONS_DIRECTORY}/${name}.mjs';\n`);
   });
   stream.end();
 });
