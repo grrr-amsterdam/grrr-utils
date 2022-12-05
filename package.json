@@ -1,7 +1,7 @@
 {
   "name": "@grrr/utils",
   "version": "2.5.0",
-  "description": "Utility functions, by Grrr.",
+  "description": "JavaScript utility functions, by GRRR.",
   "main": "index.mjs",
   "author": "GRRR <npm@grrr.nl>",
   "homepage": "https://github.com/grrr-amsterdam/grrr-utils",
